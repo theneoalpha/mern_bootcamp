@@ -15,8 +15,23 @@ app.use(express.json());
 // Step 2.5 : router ko use karenge server.js file me
 app.use("/api/auth", router);
 
+        
 // Step 1.5 : Listen karayenge browser me
 const PORT = 5000;
-app.listen(PORT, ()=>{
-    console.log(`Server is running at ${PORT}`);
-});
+
+    // Step 5.6 : "server.js" me import karenge "connectDB" function ko
+        const connectDb = require("./utils/db");
+    // Step 5.7 : Database connect karenge "server.js" me
+    /* 
+        app.listen(PORT, ()=>{
+        console.log(`Server is running at ${PORT}`);
+        });
+    */
+   connectDb().then(()=>{
+    app.listen(PORT, ()=>{
+        console.log(`Server is running at ${PORT}`);
+        });
+   });
+
+
+
