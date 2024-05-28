@@ -10,6 +10,8 @@ const app = express();
 // Step 2.4 : 'server.js' me import karenge 'router' ko 
 const router = require("./router/auth-router");
 
+// Step 4.5.3: we use middleware in "server.js" file me 
+app.use(express.json());
 // Step 2.5 : router ko use karenge server.js file me
 app.use("/api/auth", router);
 
