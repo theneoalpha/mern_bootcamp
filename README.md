@@ -96,6 +96,20 @@
                 FINALLY DATABASE CONNECTION SUCCESSFULLY 
 
 
+        Step 6 : Securing Private Data using dotenv
+
+                Step 6.1 : "npm i dotenv" && Server folder > ".env" file create karenge    
+
+                Step 6.2 : Mongodb_uri ko .env me insert karenge and "process.env" se connect karenge    
+
+                        BUT CONNECTION FAILED
+
+                Step 6.3 : "server.js" file me dotenv ko require karenge  
+                                   'require("dotenv").config();' 
+
+                        SUCCESFULLY SECURE OUR MAONGODB URI                  
+
+
 
               
 

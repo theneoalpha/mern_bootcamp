@@ -1,6 +1,9 @@
 const mongoose = require("mongoose");
 // Step 5.4 : Online Mongodb se url lenge database ka
-const URI = "mongodb+srv://theneoalpha:VikashKaushik@cluster0.fxhrtlq.mongodb.net/"
+
+    //Step 6.2 : Mongodb_uri ko .env me insert karenge and "process.env" se connect karenge  
+   // const URI = "mongodb+srv://theneoalpha:VikashKaushik@cluster0.fxhrtlq.mongodb.net/"
+        const URI = process.env.MONGODB_URI;
 
 // mongoose.connect(URI);
 

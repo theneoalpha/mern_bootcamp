@@ -15,7 +15,8 @@ app.use(express.json());
 // Step 2.5 : router ko use karenge server.js file me
 app.use("/api/auth", router);
 
-        
+        //Step 6.3 : "server.js" file me dotenv ko require karenge   
+        require("dotenv").config();     
 // Step 1.5 : Listen karayenge browser me
 const PORT = 5000;
 
